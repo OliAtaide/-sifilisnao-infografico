@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .circles {
+        position: absolute;
+    }
+
+    .circle {
+        position: absolute;
+        border-radius: 50%;
+        /*filter: blur(10px);*/
+    }
+
+    .circle-2 {
+        width: 70px;
+        height: 70px;
+    }
+
+    .circle-3 {
+        width: 50px;
+        height: 50px;
+    }
+
+    .circles {
+        filter: url(#goo);
+    }
+
+    .circle-title {
+        width: 160px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle-title, .main-circle{
+        background-image: linear-gradient(180deg, #E6E6E6 0%, #FFFFFF 100%);
+    }
+
+    .circles-1{
+        .circle:not(.circle-title) {
+            background-color: #f08296ff;
+        }
+        .circle-title {
+            border: 20px solid #f08296ff;
+        }
+
+        h1 {
+            color: #f08296ff;
+        }
+    }
+    
+    .circles-2{
+        .circle-title {
+            border: 20px solid #E54B3B;
+        }
+        .circle:not(.circle-title) {
+            background-color: #E54B3B;
+        }
+        h1 {
+            color: #E54B3B;
+        }
+    }
+
+    .circles-3{
+        .circle-title {
+            border: 20px solid #F0C63C;
+        }
+        .circle:not(.circle-title) {
+            background-color: #F0C63C;
+        }
+        h1 {
+            color: #F0C63C;
+        }
+    }
+
+    .circles-4{
+        .circle:not(.circle-title) {
+            background-color: #B73E93;
+        }
+        .circle-title {
+            border: 20px solid #B73E93;
+        }
+
+        h1 {
+            color: #B73E93;
+        }
+    }
+    
+    .circles-5{
+        .circle-title {
+            border: 20px solid #3091D1;
+        }
+        .circle:not(.circle-title) {
+            background-color: #3091D1;
+        }
+        h1 {
+            color: #3091D1;
+        }
+    }
+
+    .circles-6{
+        .circle-title {
+            border: 20px solid #6AC248;
+        }
+        .circle:not(.circle-title) {
+            background-color: #6AC248;
+        }
+        h1 {
+            color: #6AC248;
+        }
+    }
+
+    h3,
+    h1 {
+        text-align: center;
+        margin: 0;
+        z-index: 10;
+    }
+
+    .bg {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        box-shadow: 0 10px #00000060;
+        z-index: 0;
+    }
+
+    .main {
+        height: 100vh;
+        position: relative;
+    }
+
+    .main-circle {
+        width: 400px;
+        height: 400px;
+
+        background-color: white;
+        border: 20px solid #f08296ff;
+        box-sizing: border-box;
+        border-radius: 50%;
+        position: absolute;
+
+        left: calc(50% - 200px);
+        top: calc(50% - 200px);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }

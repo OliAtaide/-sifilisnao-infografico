@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+                    result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+    <div class="main">
+        <div id="mainCircle" class="main-circle">
+            <img src="logo.svg" alt="">
+            <div class="circles circles-1">
+                <div class="circle-title circle circle-1">
+                    <div class="bg"></div>
+                    <div>
+                        <h3>
+                            Eventos
+                        </h3>
+                        <h1>
+                            450
+                        </h1>
+                    </div>
+                    <div class="circle circle-2" style="left: -100px; top: 55px;">
+                        <div class="circle circle-3" style="left: -55px;">
+                        </div>
+                        <div class="circle circle-2" style="left: 15px; top: 75px;"></div>
+                    </div>
+                    <div class="circle circle-2" style="left: -60px; top: -50px;">
+                        <div class="circle circle-2" style="left: -70px; top: -35px;">
+                            <div class="circle " style="left: -155px; top: -40px; width: 150px; height: 150px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle" style="left: 40px; top: -140px; width: 120px; height: 120px;">
+                    <div class="circle circle-2" style="left: -60px; top: -30px;"></div>
+                    <div class="circle" style="left: 15px; top: -105px; width: 100px; height: 100px;">
+                        <div class="circle" style="left: -75px; top: -75px; width: 100px; height: 100px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="circles circles-2">
+                <div class="circle-title circle circle-1">
+                    <div class="bg"></div>
+                    <div>
+                        <h3>
+                            Produções Bibliográﬁcas
+                        </h3>
+                        <h1>
+                            125
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="circles circles-3">
+                <div class="circle-title circle circle-1">
+                    <div class="bg"></div>
+                    <div>
+                        <h3>
+                            Educação
+                        </h3>
+                        <h1>
+                            64
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="circles circles-6">
+                <div class="circle-title circle circle-1">
+                    <div class="bg"></div>
+                    <div>
+                        <h3>
+                            Educação
+                        </h3>
+                        <h1>
+                            64
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="circles circles-5">
+                <div class="circle-title circle circle-1">
+                    <div class="bg"></div>
+                    <div>
+                        <h3>
+                            Produções Bibliográﬁcas
+                        </h3>
+                        <h1>
+                            125
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="circles circles-4">
+                <div class="circle-title circle circle-1">
+                    <div class="bg"></div>
+                    <div>
+                        <h3>
+                            Educação
+                        </h3>
+                        <h1>
+                            64
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+<script>
+    var div = 360 / 6;
+    var radius = 360;
+    var parentdiv = document.getElementById('mainCircle');
+    var offsetToParentCenter = parseInt(parentdiv.offsetWidth / 5);
+    var offsetToChildCenter = 0;
+    var totalOffset = offsetToParentCenter - offsetToChildCenter;
+    $($('.circles').get().reverse()).each(function (index, value) {
+    
+        var y = Math.sin((div * (index - 1)) * (Math.PI / 180)) * radius;
+        var x = Math.cos((div * (index - 1))  * (Math.PI / 180)) * radius;
+        $(this).css("left", (y + totalOffset).toString() + "px")  
+        $(this).css("top", (x + totalOffset).toString() + "px")  
+    })
+</script>
+</html>
